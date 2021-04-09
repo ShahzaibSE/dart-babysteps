@@ -71,4 +71,22 @@ void main() {
   groceryList.remove("Onions");
   print('After removing Onions from list');
   print(groceryList);
+  groceryList.removeRange(2, groceryList.length-1);
+  print('Removed few items from the list');
+  print(groceryList);
+  //
+  // Natural numbers list.
+  var natural_numbers = [1,2,3,4,5,6,7,8,9,10];
+  print('Natural Numbers');
+  print(natural_numbers);
+  natural_numbers.removeWhere((element) => element>=8);
+  print('After using removeWhere on natural_numbers list');
+  print(natural_numbers);
+  // Resetting natural numbers list.
+  natural_numbers = [1,2,3,4,5,6,7,8,9,10];
+  print('Natural Numbers');
+  print(natural_numbers);
+  print('Using retainwhere on natural numbers list');
+  natural_numbers.retainWhere((element) => element>=8);
+  print(natural_numbers);
 }
