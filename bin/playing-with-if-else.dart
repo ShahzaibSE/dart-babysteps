@@ -16,3 +16,7 @@ void main() {
     print('First condition is true but second condition is false because 5 is not divisible by 2.');
   }
 }
+
+// main() {
+//  print('Main function without return type described, it still works.');
+// }
