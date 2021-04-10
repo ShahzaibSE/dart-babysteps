@@ -97,4 +97,9 @@ void main() {
   // Adding an element in the list.
   snacks_and_gorcery_list[snacks_and_gorcery_list.length-1] = "Flour";
   print(snacks_and_gorcery_list);
+  print('');
+  print('Using ForEach');
+  snacks_and_gorcery_list.forEach((element) {
+    print(element);
+  });
 }
