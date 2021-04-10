@@ -89,4 +89,10 @@ void main() {
   print('Using retainwhere on natural numbers list');
   natural_numbers.retainWhere((element) => element>=8);
   print(natural_numbers);
+  // Using Spread operator.
+  print('');
+  var snacks_and_gorcery_list = [];
+  snacks_and_gorcery_list.addAll(["Lays", "Cola", "Potato Chips", ...groceryList]);
+  print("All snacks and grocery list");
+  print(snacks_and_gorcery_list);
 }
