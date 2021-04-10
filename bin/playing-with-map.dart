@@ -49,4 +49,53 @@ main() {
   var val2 = fruit.putIfAbsent(4, () => 'Cherry');
   print(fruit);
   print(val2);
+  // Remove Methods.
+  Map words = {
+      1: 'sky',
+      2: 'fly',
+      3: 'ribbon',
+      4: 'falcon',
+      5: 'rock',
+      6: 'ocean',
+      7: 'cloud',
+      8: 'fangs'
+  };
+  print('Words');
+  print(words);
+  words.remove(1);
+  print('After deleting first key');
+  print(words);
+  words.removeWhere((key, value) => key==2);
+  print('After using removeWhere method');
+  print(words);
+  words.removeWhere((key, value) => value.startsWith('f'));
+  print(words);
+  print('Clearing entire map');
+  words.clear();
+  print(words);
+  // Merging maps.
+  print('Merging Maps');
+  var f1 = {1: 'Apple', 2: 'Orange'};
+  var f2 = {3: 'Banana'};
+  var f3 = {4: 'Mango'};
+  var fruitList = {}..addAll(f1)..addAll(f2)..addAll(f3);
+  print(fruit);
+  var fruit3 = {...f1, ...f2, ...f3};
+  print(fruit3);
+  // Making a map using iterables such as list.
+  var letters = ['I', 'II', 'V', 'X', 'L'];
+  var numbers = [1, 2, 5, 10, 50];
+  var data = Map.fromIterables(letters, numbers);
+  print('Map from lists');
+  print(data);
+  // Checking if key or value exists.
+  var myMap = {1: 'Apple', 2: 'Orange', 3: 'Banana'};
+  print(myMap.containsKey(1));
+  print(myMap.containsKey(3));
+  print(myMap.containsValue('Apple'));
+  print(myMap.containsValue('Cherry'));
+  // Iterating over map.
+  fruitList.forEach((key, value) {
+    print('$key:$value');
+  });
 }
