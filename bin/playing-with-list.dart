@@ -97,4 +97,25 @@ void main() {
   // Adding an element in the list.
   snacks_and_gorcery_list[snacks_and_gorcery_list.length-1] = "Flour";
   print(snacks_and_gorcery_list);
+  print('');
+  print('Using ForEach');
+  snacks_and_gorcery_list.forEach((element) {
+    print(element);
+  });
+  //
+  // ====== List of Maps ======== //
+  List students = [
+    {'id': 1, 'name': 'Shahzaib'},
+    {'id': 2, 'name': 'James'},
+    {'id': 3, 'name': 'Luis'},
+    {'id': 4, 'name': 'Bruce'},
+    {'id': 5, 'name': 'Kety'},
+    {'id': 0, 'name': 'Lucifer'}
+  ];
+  print('Students');
+  print(students);
+  // Sorting list of maps.
+  students.sort((a,b)=>(a['id'].compareTo(b['id'])));
+  print('After sorting list of maps which has students');
+  print(students);
 }
