@@ -100,4 +100,12 @@ void main() {
   print('');
   print('Frequent numbers');
   print(popular_numbers);
+  print('');
+  //
+  // For-in loop.
+  print('Implementation of for for-in loop');  
+  const myString = 'I ❤ Dart';
+  for (var codePoint in myString.runes) {
+    print(String.fromCharCode(codePoint));
+  }
 }
