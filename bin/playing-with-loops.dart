@@ -28,4 +28,38 @@ void main() {
     while_counter++;
   }
   // For loop.
+  // 
+  print('');
+  var list = [1, 1, 1, 2, 2, 3, 4, 5];
+  list.sort();
+  var popularNumbers = [];
+  List<Map<dynamic, dynamic>> data = [];
+  var maxOccurrence = 0;
+
+  var i = 0;
+  while (i < list.length) {
+    var number = list[i];
+    var occurrence = 1;
+    for (int j = 0; j < list.length; j++) {
+      if (j == i) {
+        continue;
+      }
+      else if (number == list[j]) {
+        occurrence++;
+      }
+    }
+    list.removeWhere((it) => it == number);
+    data.add({number: occurrence});
+    if (maxOccurrence < occurrence) {
+      maxOccurrence = occurrence;
+    }
+  }
+
+  data.forEach((map) {
+    if (map[map.keys.toList()[0]] == maxOccurrence) {
+      popularNumbers.add(map.keys.toList()[0]);
+    }
+  });
+  print('');
+  print(popularNumbers);
 }
