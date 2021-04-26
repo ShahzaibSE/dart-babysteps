@@ -63,4 +63,41 @@ void main() {
   print('');
   print(data);
   print('Most popular elements: $popularNumbers');
+  print('');
+  //
+  // Check number of occurances using for-loop.
+  var numbers = <num>[1, 1, 1, 2, 2, 3, 4, 5]; 
+  numbers.sort();
+  List<Map<dynamic, dynamic>> occurances_data = [];
+  int max_occurances = 0;
+  List<num> popular_numbers = [];
+  //
+  for(num i=0;i<numbers.length;){
+    var number = numbers[i];
+    num occurance_counter = 1;
+    for (num j=0; j<numbers.length; j++){
+      if(j==i){
+        continue;
+      }
+      if(number == numbers[j]){
+        occurance_counter++;
+      }
+    }
+    numbers.removeWhere((element) => element == number);
+    occurances_data.add({number:occurance_counter});
+    if(max_occurances < occurance_counter) {
+      max_occurances = occurance_counter;
+    }
+  }
+  occurances_data.forEach((map) { 
+    if(map[map.keys.toList()[0]]==max_occurances){
+      print('Max Occurance found');
+      print('');
+      popular_numbers.add(map.keys.toList()[0]);
+    }
+  });
+  print(occurances_data);
+  print('');
+  print('Frequent numbers');
+  print(popular_numbers);
 }
