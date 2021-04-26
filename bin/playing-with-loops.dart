@@ -61,5 +61,6 @@ void main() {
     }
   });
   print('');
-  print(popularNumbers);
+  print(data);
+  print('Most popular elements: $popularNumbers');
 }
