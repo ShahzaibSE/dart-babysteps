@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'dart:math';
+
 //
 void main() {
   // Generating simple sequence of numbers.
@@ -108,4 +109,56 @@ void main() {
   for (var codePoint in myString.runes) {
     print(String.fromCharCode(codePoint));
   }
+  var list1 = <num>[10,20,30,40,50,60];
+  print('');
+  print('Iterating through a list using for-in loop');
+  for(var i in list1){
+    print(i);
+  }
+  //
+  //-- For Each Loop.
+  var names_data = <String>['shahzaib', 'bruce', 'james', 'walter', 'snyder'];
+  var upper_case_names = names_data.map((e) => (e.toUpperCase()));
+  print('');
+  print(upper_case_names);
+  print('');
+  print('Names list');
+  //
+  names_data.forEach((item) {
+    item = item.toUpperCase();
+    print(item);
+  });
+  //
+  print('');
+  print('Name original list');
+  print(names_data);
+  // -- Mini loop excercise.
+  print('');
+  num counter = 0;
+  while(counter<10){
+    print('Counter is $counter');
+    counter++;
+  }
+  //
+  // -- “Write a for loop starting at 1 and ending with 10 inclusive. Print the square of each number.” -- //
+  print('');
+  for(num i=0; i<=10; i++){
+    num squarred_num = i*i;
+    print('$i = $squarred_num');
+  }
+  // -- Squarred of numbers in for-in loop. -- //
+  print('');
+  print('For-In loop excercise');
+  final number_list = [1,2,4,7];
+  for(num item in number_list){
+    num squarred_num = item * item;
+    print('$item = $squarred_num');
+  }
+  // -- Same excercise with for-each loop. -- //
+  print('');
+  print('For Each loop excercise.');
+  number_list.forEach((element) { 
+    var squarred_num = element * element;
+    print('$element = $squarred_num');
+  });
 }
