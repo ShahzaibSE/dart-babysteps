@@ -54,4 +54,5 @@ void main() {
 
   var merged_list = [...list1, ...list2, ...list3];
   print('Merged list: $merged_list');
+  // merged_list.isEmpty()
 }

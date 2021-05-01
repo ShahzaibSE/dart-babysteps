@@ -35,4 +35,7 @@ void main() {
   var numbers = [1, 2, 5, 10, 50];
   var data = Map.fromIterables(letters, numbers);
   print('Using fromIterables method creating a Map: $data');
+  print(data.values);
+  var xyz = "Flutter & Dart";
+  print(xyz);
 }
