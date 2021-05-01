@@ -51,4 +51,7 @@ void main() {
   print('List #3: $list3');
   list3.retainWhere((element) => element % 2 == 0);
   print('Keeping only even numbers in list #3: $list3');
+
+  var merged_list = [...list1, ...list2, ...list3];
+  print('Merged list: $merged_list');
 }
